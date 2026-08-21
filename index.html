@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Birthday Magic for UPOMA</title>
+        <link rel="stylesheet" href="./st.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    </head>
+
+    <body>
+
+        <canvas id="galaxyCanvas"></canvas>
+        <canvas id="flowerCanvas"></canvas>
+
+        <!-- 4 Corners Glowing Blooming Flowers -->
+        <div class="growing-flowers">
+            <!-- Bottom-Left (3 Flowers) -->
+            <div class="flower-group corner-bottom-left">
+                <div class="flower flower--sub-a">
+                    <div class="flower__leafs">
+                        <div class="flower__leaf flower__leaf--1"></div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__white-circle"></div>
+                    </div>
+                    <div class="flower__line"></div>
+                </div>
+                <div class="flower flower--sub-b">
+                    <div class="flower__leafs">
+                        <div class="flower__leaf flower__leaf--1"></div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__white-circle"></div>
+                    </div>
+                    <div class="flower__line"></div>
+                </div>
+                <div class="flower flower--sub-c">
+                    <div class="flower__leafs">
+                        <div class="flower__leaf flower__leaf--1"></div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__white-circle"></div>
+                    </div>
+                    <div class="flower__line"></div>
+                </div>
+            </div>
+
+            <!-- Bottom-Right (3 Flowers) -->
+            <div class="flower-group corner-bottom-right">
+                <div class="flower flower--sub-a">
+                    <div class="flower__leafs">
+                        <div class="flower__leaf flower__leaf--1"></div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__white-circle"></div>
+                    </div>
+                    <div class="flower__line"></div>
+                </div>
+                <div class="flower flower--sub-b">
+                    <div class="flower__leafs">
+                        <div class="flower__leaf flower__leaf--1"></div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__white-circle"></div>
+                    </div>
+                    <div class="flower__line"></div>
+                </div>
+                <div class="flower flower--sub-c">
+                    <div class="flower__leafs">
+                        <div class="flower__leaf flower__leaf--1"></div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__white-circle"></div>
+                    </div>
+                    <div class="flower__line"></div>
+                </div>
+            </div>
+
+            <!-- Top-Left (3 Flowers Hang Down) -->
+            <div class="flower-group corner-top-left">
+                <div class="flower flower--sub-a">
+                    <div class="flower__leafs">
+                        <div class="flower__leaf flower__leaf--1"></div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__white-circle"></div>
+                    </div>
+                    <div class="flower__line"></div>
+                </div>
+                <div class="flower flower--sub-b">
+                    <div class="flower__leafs">
+                        <div class="flower__leaf flower__leaf--1"></div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__white-circle"></div>
+                    </div>
+                    <div class="flower__line"></div>
+                </div>
+                <div class="flower flower--sub-c">
+                    <div class="flower__leafs">
+                        <div class="flower__leaf flower__leaf--1"></div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__white-circle"></div>
+                    </div>
+                    <div class="flower__line"></div>
+                </div>
+            </div>
+
+            <!-- Top-Right (3 Flowers Hang Down) -->
+            <div class="flower-group corner-top-right">
+                <div class="flower flower--sub-a">
+                    <div class="flower__leafs">
+                        <div class="flower__leaf flower__leaf--1"></div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__white-circle"></div>
+                    </div>
+                    <div class="flower__line"></div>
+                </div>
+                <div class="flower flower--sub-b">
+                    <div class="flower__leafs">
+                        <div class="flower__leaf flower__leaf--1"></div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__white-circle"></div>
+                    </div>
+                    <div class="flower__line"></div>
+                </div>
+                <div class="flower flower--sub-c">
+                    <div class="flower__leafs">
+                        <div class="flower__leaf flower__leaf--1"></div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__white-circle"></div>
+                    </div>
+                    <div class="flower__line"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-container">
+            <div class="gift-box" id="giftBox" onclick="startSequence()">
+                <div class="box-content">
+                    <span class="box-icon">🎁</span>
+                    <p class="box-text">CLICK TO UNWRAP</p>
+                </div>
+            </div>
+
+            <div class="stage" id="stage">
+                <canvas id="heartCanvas"></canvas>
+                <div class="hbd-text" id="hbdText">HAPPY BIRTHDAY</div>
+
+                <div class="name-container" id="nameContainer">
+                    <span class="letter" id="l0">U</span>
+                    <span class="letter" id="l1">P</span>
+                    <span class="letter" id="l2">O</span>
+                    <span class="letter" id="l3">M</span>
+                    <span class="letter" id="l4">A</span>
+                </div>
+
+                <div class="cards-wrapper" id="cardsWrapper">
+                    <div class="card" onclick="flipCard(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-letter">S</span>
+                            </div>
+                            <div class="card-back">
+                                <img src="./two.jpeg" alt="Shohag Image" class="card-img">
+                                <!-- <span class="card-letter">S</span> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="flipCard(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-letter">H</span>
+                            </div>
+                            <div class="card-back">
+                                <img src="./one.jpeg" alt="Shohag Image" class="card-img">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="flipCard(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-letter">O</span>
+                            </div>
+                            <div class="card-back">
+                                <img src="./six.jpeg" alt="Shohag Image" class="card-img">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="flipCard(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-letter">H</span>
+                            </div>
+                            <div class="card-back">
+                                <img src="./four.jpeg" alt="Shohag Image" class="card-img">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="flipCard(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-letter">A</span>
+                            </div>
+                            <div class="card-back">
+                                <img src="./five.jpeg" alt="Shohag Image" class="card-img">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="flipCard(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-letter">G</span>
+                            </div>
+                            <div class="card-back">
+                                <img src="./seven.jpeg" alt="Shohag Image" class="card-img">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="flipCard(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-letter">H</span>
+                            </div>
+                            <div class="card-back">
+                                <img src="./ei.jpg" alt="Shohag Image" class="card-img">
+                    
+                            </div>
+                        </div>
+                    </div>
+                       
+                    <div class="card" onclick="flipCard(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-letter">+</span>
+                            </div>
+                            <div class="card-back">
+                                <img src="./k.jpeg" alt="Shohag Image" class="card-img">
+                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" onclick="flipCard(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-letter">U</span>
+                            </div>
+                            <div class="card-back">
+                                <img src="./ten.jpeg" alt="Shohag Image" class="card-img">
+                    
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="flipCard(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-letter">P</span>
+                            </div>
+                            <div class="card-back">
+                                <img src="./nin.jpg" alt="Shohag Image" class="card-img">
+                    
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="flipCard(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-letter">O</span>
+                            </div>
+                            <div class="card-back">
+                                <img src="./n.jpeg" alt="Shohag Image" class="card-img">
+                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" onclick="flipCard(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-letter">M</span>
+                            </div>
+                            <div class="card-back">
+                                <img src="./twe.jpeg" alt="Shohag Image" class="card-img">
+                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" onclick="flipCard(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-letter">A</span>
+                            </div>
+                            <div class="card-back">
+                                <img src="./m.jpeg" alt="Shohag Image" class="card-img">
+                    
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card" onclick="flipCard(this)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-letter">UPOMA+SHOHAGH</span>
+                            </div>
+                            <div class="card-back">
+                                <img src="./three.jpeg" alt="Shohag Image" class="card-img">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="ja.js"></script>
+    </body>
+
+</html>
