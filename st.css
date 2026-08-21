@@ -379,7 +379,7 @@ html {
 
 /* ৩ডি স্লো স্পিন অ্যানিমেশন (ক্লিক করার আগ পর্যন্ত ঘুরবে) */
 .card.show-card:not(.flipped) .card-inner {
-    animation: continuousSpin 4s linear infinite;
+    animation: continuousSpin 8s linear infinite;
 }
 
 @keyframes continuousSpin {
