@@ -394,7 +394,7 @@ html {
 
 /* মাউস নেওয়ার পর একটু বড় হবে */
 .card.show-card:hover {
-    transform: scale(1.1);
+    transform: scale(7.1);
 }
 
 /* ক্লিক করলে উল্টে ছবি দেখাবে (Rotate 180deg) */
